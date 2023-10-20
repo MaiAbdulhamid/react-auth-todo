@@ -21,7 +21,7 @@ function Todo({ todo }) {
         task: inputRef.current.value,
       })
     );
-    // inputRef.current.disabled = true;
+    inputRef.current.disabled = true;
   };
 
   return (
@@ -32,7 +32,7 @@ function Todo({ todo }) {
         name="task"
         defaultValue={todo.task}
         disabled={inputRef}
-        onChange={() => update()}
+        onMouseLeave={() => update()}
       />
       <div className="flex gap-0.5">
         <button className="bg-green-500 hover:bg-green-700 text-white font-bold p-1 rounded border-none mt-2 mb-2" onClick={changeFocus}>Edit</button>
